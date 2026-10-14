@@ -2,9 +2,11 @@
 
 Public, signed binary distribution. Application source is kept separately.
 
-Install [launcher 1.130](launcher/RemoteClient-launcher-1.130.apk) once, without
-uninstalling an existing client. Launcher 1.129 also supports the current
-runtime, so existing launcher users do not need another APK installation.
+Install [launcher 1.131](launcher/RemoteClient-launcher-1.131.apk) once, without
+uninstalling an existing client. Launchers 1.129/1.130 also support the current
+runtime and notification dot. Launcher 1.131 additionally checks on client
+readiness/resume (including restored tasks), when Internet access is available;
+install this APK over the existing app to get that launcher-side improvement.
 On first launch it downloads the signed
 runtime from `release/`. Subsequent launches use the verified local copy and
 check for updates in the background. **Settings → Check for updates** shows the
@@ -29,7 +31,12 @@ for GitHub/sideloading, not Google Play.
 
 Developer support: Discord `ergent95`.
 
-Runtime 1.130 adds portable configuration export/import in General settings.
+Runtime 1.131 adds a red notification dot to Settings when a verified update
+is available and a live update status in General settings. Pairing invitations
+explicitly select Local or Relay storage regardless of the current connection
+mode; scanning confirms which invitation was saved.
+
+Runtime 1.130 added portable configuration export/import in General settings.
 Passwords, pairing QR codes, certificates and PC addresses are excluded. Missing
 fields in old configuration codes preserve current preferences; PC profiles are
 mapped by ordinal position rather than the sender's identity.
