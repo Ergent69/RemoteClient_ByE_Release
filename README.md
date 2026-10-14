@@ -2,7 +2,7 @@
 
 Public, signed binary distribution. Application source is kept separately.
 
-Install [launcher 1.131](launcher/RemoteClient-launcher-1.131.apk) once, without
+Install [launcher 1.132](launcher/RemoteClient-launcher-1.132.apk) once, without
 uninstalling an existing client. Launchers 1.129/1.130 also support the current
 runtime and notification dot. Launcher 1.131 additionally checks on client
 readiness/resume (including restored tasks), when Internet access is available;
@@ -35,6 +35,12 @@ Runtime 1.131 adds a red notification dot to Settings when a verified update
 is available and a live update status in General settings. Pairing invitations
 explicitly select Local or Relay storage regardless of the current connection
 mode; scanning confirms which invitation was saved.
+
+Runtime 1.132 fixes the QR scanner crash caused by colliding launcher/runtime
+resource IDs. The runtime now uses a separate resource package (`0x80`), while
+the installed launcher's resources keep `0x7f`. Install the client update from
+Settings and restart; this scanner fix also works with launcher 1.129/1.130 and
+does not require another APK installation or removal of existing settings.
 
 Runtime 1.130 added portable configuration export/import in General settings.
 Passwords, pairing QR codes, certificates and PC addresses are excluded. Missing
