@@ -1,0 +1,3 @@
+*.zip -text
+*.apk -text
+release/update.json -text

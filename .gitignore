@@ -1,0 +1,19 @@
+# Public binaries only. Never publish a source/workspace or user data export.
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/release/
+/release/*
+!/release/update.json
+!/release/RemoteClient-runtime-*.zip
+!/launcher/
+/launcher/*
+!/launcher/RemoteClient-launcher-*.apk
+*.pem
+*.key
+*.jks
+*.keystore
+user/
+settings/
+logs/
