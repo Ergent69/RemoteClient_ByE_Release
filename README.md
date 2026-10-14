@@ -2,7 +2,10 @@
 
 Public, signed binary distribution. Application source is kept separately.
 
-Install the APK in `launcher/` once. On first launch it downloads the signed
+Install [launcher 1.130](launcher/RemoteClient-launcher-1.130.apk) once, without
+uninstalling an existing client. Launcher 1.129 also supports the current
+runtime, so existing launcher users do not need another APK installation.
+On first launch it downloads the signed
 runtime from `release/`. Subsequent launches use the verified local copy and
 check for updates in the background. **Settings → Check for updates** shows the
 installed/available version and lets you install an update. Applying it requires
@@ -25,3 +28,8 @@ require a new launcher APK. Dynamic executable-code distribution is intended
 for GitHub/sideloading, not Google Play.
 
 Developer support: Discord `ergent95`.
+
+Runtime 1.130 adds portable configuration export/import in General settings.
+Passwords, pairing QR codes, certificates and PC addresses are excluded. Missing
+fields in old configuration codes preserve current preferences; PC profiles are
+mapped by ordinal position rather than the sender's identity.
